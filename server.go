@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -10,7 +11,7 @@ import (
 
 	"github.com/daaku/go.httpgzip"
 	"github.com/jmoiron/sqlx"
-	"gopkg.in/cq.v1"
+	_ "gopkg.in/cq.v1"
 	"gopkg.in/cq.v1/types"
 )
 
@@ -209,5 +210,12 @@ func main() {
 	serveMux.HandleFunc("/movie/", movieHandler)
 	serveMux.HandleFunc("/graph", graphHandler)
 
-	panic(http.ListenAndServe(":"+os.Getenv("PORT"), httpgzip.NewHandler(serveMux)))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	fmt.Println("Starting server on port: ", port)
+
+	panic(http.ListenAndServe(":"+port, httpgzip.NewHandler(serveMux)))
 }
