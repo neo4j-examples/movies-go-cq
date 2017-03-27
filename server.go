@@ -10,7 +10,7 @@ import (
 
 	"github.com/daaku/go.httpgzip"
 	"github.com/jmoiron/sqlx"
-	"gopkg.in/cq.v1"
+	_ "gopkg.in/cq.v1"
 	"gopkg.in/cq.v1/types"
 )
 
