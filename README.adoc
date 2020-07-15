@@ -2,7 +2,7 @@
 
 === Stack
 
-* Go 
+* Go
 * https://github.com/go-cq/cq[cq]
 * Neo4j-Server
 * Frontend: jquery, bootstrap, http://d3js.org/[d3.js]
@@ -42,6 +42,8 @@ Go to http://localhost:8080
 
 You can search for movies by title or and click on any entry.
 
+Note: _If you get an `http: panic serving` error, you likely have auth configured.  Simply update the neo4jURL var in server.go to "http://username:password@localhost:7474"._
+
 === Deploy to Heroku
 
 [source,shell]
@@ -61,6 +63,6 @@ godep save
 
 # commit
 git commit -a -m 'Heroku / deps'
-# push to heroku 
+# push to heroku
 git push heroku master
 ----
