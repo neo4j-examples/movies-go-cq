@@ -41,26 +41,3 @@ PORT=8080 go run server.go
 Go to http://localhost:8080
 
 You can search for movies by title or and click on any entry.
-
-=== Deploy to Heroku
-
-[source,shell]
-----
-# create a new app with the go buildpack
-heroku create -b https://github.com/kr/heroku-buildpack-go.git
-# add the graphenedb addon
-heroku addons:add graphenedb:chalk
-
-# create a procfile (cq-example should be replaced with whatever go build creates)
-echo 'web: cq-example' > Procfile
-
-# install godep
-go get github.com/kr/godep
-# save deps (do this whenever you update your 3rd party libs)
-godep save
-
-# commit
-git commit -a -m 'Heroku / deps'
-# push to heroku 
-git push heroku master
-----
