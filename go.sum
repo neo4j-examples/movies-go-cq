@@ -1,0 +1,6 @@
+github.com/daaku/go.httpgzip v0.0.0-20130226210307-fd996995061c h1:NzBZRPZOFVRVlrF0xRk3nGwAjuOrlkoSIRRIpt2KzW0=
+github.com/daaku/go.httpgzip v0.0.0-20130226210307-fd996995061c/go.mod h1:oS4QGj57ttv8kMrVsLv6T4tUYpcxOWtz9Zgn7WM4LbY=
+github.com/jmoiron/sqlx v0.0.0-20140519065006-4c1be0c51122 h1:D+moS+leEz0LsKEktQmaqaeHbjQT+wK2NVk1TLpJjjk=
+github.com/jmoiron/sqlx v0.0.0-20140519065006-4c1be0c51122/go.mod h1:IiEW3SEiiErVyFdH8NTuWjSifiEQKUoyK3LNqr2kCHU=
+gopkg.in/cq.v1 v1.0.0-20140723025800-f77618b5402f h1:ouAEN3BX9K+VCp4VrHi5kH7ZyC7LO6KizjAqWN1MBQ0=
+gopkg.in/cq.v1 v1.0.0-20140723025800-f77618b5402f/go.mod h1:HuR8NNz9xKpBMdWgjNVq0WVkVFZThzZ2XMoDZAWRsWc=
