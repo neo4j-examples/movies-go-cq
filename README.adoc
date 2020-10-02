@@ -2,9 +2,8 @@
 
 === Stack
 
-* Go 
-* https://github.com/go-cq/cq[cq]
-* Neo4j-Server
+* Go and https://github.com/neo4j/neo4j-go-driver[official Go driver]
+* Neo4j Server
 * Frontend: jquery, bootstrap, http://d3js.org/[d3.js]
 
 === Endpoints:
@@ -13,13 +12,13 @@ Get Movie
 
 ----
 // JSON object for single movie with cast
-curl http://cq-neo4j-movies.herokuapp.com/movie/The%20Matrix
+curl http://BASE_URL/movie/The%20Matrix
 
 // list of JSON objects for movie search results
-curl http://cq-neo4j-movies.herokuapp.com/search?q=matrix
+curl http://BASE_URL/search?q=matrix
 
 // JSON object for whole graph viz (nodes, links - arrays)
-curl http://cq-neo4j-movies.herokuapp.com/graph
+curl http://BASE_URL/graph
 ----
 
 === Setup
@@ -28,14 +27,14 @@ This uses the Go standard library HTTP server, along with the cq library, and a 
 
 === Run locally:
 
-Start your local Neo4j Server (http://neo4j.com/download[Download & Install]), open the http://localhost:7474[Neo4j Browser].
+Start your local Neo4j Server (http://neo4j.com/download[Download & Install]), open Neo4j Browser.
 Then install the Movies data-set with `:play movies`, click the statement, and hit the triangular "Run" button.
 
 Start this application with:
 
 [source,shell]
 ----
-PORT=8080 go run server.go
+go run server.go
 ----
 
 Go to http://localhost:8080
